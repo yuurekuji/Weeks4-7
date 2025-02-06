@@ -25,10 +25,11 @@ public class CanvasCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 mouse = Input.mousePosition;
         Vector3 pos = sprite.transform.position;
-        Vector3 rot = transform.eulerAngles;
-        
-        if (Input.GetMouseButtonDown(0) && sprite.bounds.Contains(pos))
+        Vector2 Screens = Camera.main.ScreenToWorldPoint(mouse);
+
+        if (Input.GetMouseButtonDown(0) && sprite.bounds.Contains(Screens))
         {
             audi.Play();
             ismousedown = !ismousedown;
@@ -37,6 +38,7 @@ public class CanvasCode : MonoBehaviour
 
         if (ismousedown == true)
         {
+         
             Go.SetActive(true);
         }
         else
