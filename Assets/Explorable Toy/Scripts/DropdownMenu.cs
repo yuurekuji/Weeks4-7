@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,6 +12,9 @@ public class DropdownMenu : MonoBehaviour
     public AudioSource audi;
     public AudioSource audi2;
     public AudioSource audi3;
+    public bool charizard = false;
+    public bool blastoise = false;
+    public bool venusaur = false;
 
     // Start is called before the first frame update
 
@@ -31,16 +35,26 @@ public class DropdownMenu : MonoBehaviour
         if (dropdown.value == 1) // this is a conditional statement checking the value variable of the dropdown. if it is 1 thenplay the bulbasaur sound
         {
             audi.Play();
+            venusaur = true;
+            charizard = false;
+            blastoise = false;
+            
         }
         else if (dropdown.value == 2)// this is a conditional statement checking the value variable of the dropdown. if it is 2 then play the charmander sound
 
         {
             audi2.Play();
+            charizard = true;
+            venusaur = false;
+            blastoise = false;
         }
         else if (dropdown.value == 3)// this is a conditional statement checking the value variable of the dropdown. if it is 3 then play the squirtle sound
 
         {
             audi3.Play();
+            blastoise = true;
+            charizard = false;
+            venusaur = false;
         }
 
     }

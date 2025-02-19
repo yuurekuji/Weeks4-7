@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Text : MonoBehaviour
 {
     public TextMeshProUGUI Level;
-    float level = 1;
+    public float level = 1;
     public Slider Lv;
     // Start is called before the first frame update
     void Start()
