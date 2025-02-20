@@ -21,7 +21,7 @@ public class Evolution : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.GetComponent<SizeChange>().Size == 100)
+        if (gameObject.GetComponent<SizeChange>().Size == 100) // this is a conditional to check if the size variable inside the SizeChange function is at 100 (meaning that the level will then be 100)
         {
             sr.enabled = false;
             if (gameObject.GetComponent<DropdownMenu>().venusaur == true)

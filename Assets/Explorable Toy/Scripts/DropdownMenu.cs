@@ -34,7 +34,9 @@ public class DropdownMenu : MonoBehaviour
     {
         if (dropdown.value == 1) // this is a conditional statement checking the value variable of the dropdown. if it is 1 thenplay the bulbasaur sound
         {
-            audi.Play();
+            audi.Play(); // this plays the selected audio when the value is a certain value.
+
+            // we set Venusuar to true and turn everythung else to false for an added layer of protection. This ensures that only one boolean is on at a time when sometimes there may be issues where multiple are displaying.
             venusaur = true;
             charizard = false;
             blastoise = false;
@@ -43,15 +45,19 @@ public class DropdownMenu : MonoBehaviour
         else if (dropdown.value == 2)// this is a conditional statement checking the value variable of the dropdown. if it is 2 then play the charmander sound
 
         {
-            audi2.Play();
-            charizard = true;
+            audi2.Play();// this plays the selected audio when the value is a certain value.
+
+            // we set charizard to true and turn everythung else to false for an added layer of protection. This ensures that only one boolean is on at a time when sometimes there may be issues where multiple are displaying.
+            charizard = true; 
             venusaur = false;
             blastoise = false;
         }
         else if (dropdown.value == 3)// this is a conditional statement checking the value variable of the dropdown. if it is 3 then play the squirtle sound
 
         {
-            audi3.Play();
+            audi3.Play();// this plays the selected audio when the value is a certain value.
+
+            // we set Blastoise to true and turn everythung else to false for an added layer of protection. This ensures that only one boolean is on at a time when sometimes there may be issues where multiple are displaying.
             blastoise = true;
             charizard = false;
             venusaur = false;
